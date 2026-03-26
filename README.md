@@ -3,22 +3,14 @@
 ![SSP](main.png)
 
 
-
 # 🏛️ Installation:
 - 1.Download the source code in this repository.
-- 2.Download the weights of all SSP models at [https://huggingface.co/zengwenwu/EiRA](https://huggingface.co/zengwenwu/EiRA/tree/main).
+- 2.Download the weights of all SSP models at [https://huggingface.co/zengwenwu/SSP](https://huggingface.co/zengwenwu/SSP/tree/main).
 - 3.Unzip all .zip packages.
 - 4.Prepare the environment. Please note that this environment is prepared for ESM3. If you need to use ProteinMPNN and ESM-IF1, please create a different environment.
  ```
 pip install requirements.txt
 ```
-
-|CheckPoint Name | Description | Size |
-|:--------|:--------:|-------:|
-| DNAbinder_lora_ft32_DNAlen50_cross_att_DNAtransformer_DNAbinder.pth | DNA transformer and Cross attention weights of DNA-informed EiRA | 2.23G |
-| EiRA_checkpoint_DNAbinder_lora_ft32_DNAlen50.zip | LoRA weighht of DNA-informed EiRA | 23.9M |
-| EiRA_checkpoint_vanilla_lora_ft32_repeat_penalty.zip | LoRA wight of EiRA without DPO | 10.1M |
-| DPO_checkpoint_VanillaLora_part_data_no_repeat.zip | LoRA wight of EiRAD with DPO | 12.1M |
 
 # 🔍 Inference
 
