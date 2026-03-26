@@ -16,7 +16,7 @@
 | EiRA_checkpoint_vanilla_lora_ft32_repeat_penalty.zip | LoRA wight of EiRA without DPO | 10.1M |
 | DPO_checkpoint_VanillaLora_part_data_no_repeat.zip | LoRA wight of EiRAD with DPO | 12.1M |
 
-# 🔍 Protein Generation like ESM3
+# 🔍 Inference
 
 EiRA inherits the flexible multi-modal editing feature of ESM3 and supports the free combination of multiple tracks of prompts.
 
