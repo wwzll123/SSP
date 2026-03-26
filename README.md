@@ -1,6 +1,6 @@
 # 🔥 A Symmetric Self-play Online Preference Optimization Framework for Protein Inverse Folding
 
-![EiRA](Figure1.png)
+![SSP](main.png)
 
 
 
