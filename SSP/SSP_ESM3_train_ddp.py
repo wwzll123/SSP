@@ -15,12 +15,6 @@ import json
 import numpy as np
 import logging
 from contextlib import nullcontext
-
-os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
-sys.path.append("../")
-sys.path.append("/root/MapDiff-main/")
-sys.path.append("/root/MapDiff-main/SP-IF/")
-
 import wandb
 import hydra
 import torch
