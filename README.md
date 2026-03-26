@@ -14,17 +14,16 @@ pip install requirements.txt
 
 # 🔍 Inference
 
-EiRA inherits the flexible multi-modal editing feature of ESM3 and supports the free combination of multiple tracks of prompts.
+Once you have prepared the pdb/cif files, you can run the inference script directly..
 
  ```
- $ python run_EiRA.py \
-           --weight_dir "The local path of the downloaded weight file"
-           --SRC_PDB_path "The path of your template"
-           --designed_seq_save_path "Result path"
-           --design_num "Number of designed sequences"
-           --inform_position "The constant residue indices in the template, like: 0,1,2,3,5,6,7,8,9"
+ $ python run_design.py \
+           --pdb example.pdb \
+           --temperature 1 \
+           --num_samples 10 \
+           --lora_dir "YOUR LOCAL PATH" \
+           --output "SAVE FASTA PATH" \
            --device cuda:0
-           --chain Template chain (like "A")
 ```
 
 
