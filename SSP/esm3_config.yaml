@@ -1,0 +1,71 @@
+hydra:
+  run:
+    dir: /root/autodl-tmp/sspif_output/${experiment.name}_${now:%Y-%m-%d}_${now:%H-%M-%S}
+  output_subdir: configs
+
+experiment:
+  name: SSP-ESM3
+
+dataset:
+  train_dir: /root/autodl-tmp/cath_chain_dir/train
+  val_dir: /root/autodl-tmp/cath_chain_dir/validation
+  test_dir: /root/autodl-tmp/cath_chain_dir/test
+  pdb_chain_dir: /root/autodl-tmp/cath_chain_dir
+  structure_token_dir: /root/autodl-tmp/cath_chain_dir/cath_esm3_structure_token
+  max_length: 384  # 最大序列长度，超过则随机截断
+  debug_samples: 0  # 调试用：只取前 N 个样本，设为 null 或 0 表示使用全部数据
+  debug_eva_samples: 0  # 调试用：只取前 N 个样本，设为 0 表示使用全部数据
+  skip_esmfold_eval: false  # 调试用：跳过 ESMFold 评估（节省显存），正式训练时设为 false
+
+train:
+  save_and_sample_every: 50
+  train_epochs: 5
+  batch_size: 1
+  lr: 1e-4
+  init_ckpt: /root/autodl-tmp/spif_best.pt
+  num_workers: 4
+  update_every: 12
+  ref_update_every: 10
+  clip_grad_norm: 1.0
+  log_step_interval: 10
+
+model:
+  fine_tune_layer_num: 16
+  model_A_LoRA_weight_dir: /root/autodl-tmp/sspif_output/SSP-ESM3_2026-01-23_13-41-23/model_A_epoch1
+  model_B_LoRA_weight_dir: /root/autodl-tmp/sspif_output/SSP-ESM3_2026-01-23_13-41-23/model_B_epoch1
+  Ref_Model_LoRA_weight_dir: /root/autodl-tmp/sspif_output/SSP-ESM3_2026-01-23_13-41-23/ref_model_epoch1
+
+# SSP 模型配置
+ssp:
+  use_js: true          # 是否使用 JS divergence 损失（防止 A/B 模型同质化）
+  lambda_js: 0.02       # JS 损失系数
+  entropy_bonus_B: 0.01 # B 模型的熵奖励系数
+  entropy_bonus_A: 0.005
+
+# SP（单模型：model_A + ref_model）配置
+sp:
+  objective: sc         # sc | pred  （分别偏向结构相容性 / 预测稳定性）
+  k_samples: 10
+  include_ref_candidates: true
+  k_ref_samples: 5
+  temp_A: 1.0
+  temp_ref: 0.8
+  pair_margin: 0.05
+  max_pairs: 16
+  min_plddt: 0.45
+  min_ptm: 0.35
+  dpo_beta: 0.1
+  lambda_sft: 0.5
+  entropy_bonus: 0.0
+  ema_decay: 0.995
+  reward_w_tm: 0.4
+  reward_w_rmsd_term: 0.6
+  reward_w_plddt: 0.5
+  reward_w_ptm: 0.5
+  top_k: 10
+  top_p: 0.9
+
+# DDP 配置
+ddp:
+  backend: nccl
+  find_unused_parameters: false
