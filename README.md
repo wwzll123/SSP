@@ -29,7 +29,7 @@ Once you have prepared the pdb/cif files, you can run the inference script direc
 
 # ⚔️ Training
 - 1.Before starting the training, you should first generate the [Structure Token](./gen_structure_token.py).
-- 2.[Configure](./ssp/esm3_config.yaml) your PDB, token, and weight path.
+- 2.[Configure](./SSP/esm3_config.yaml) your PDB, token, and weight path.
 - 3.Run the following command depend on the number of GPUs available to you.
  ```
 bash run_ddp.sh NUM_GPU
