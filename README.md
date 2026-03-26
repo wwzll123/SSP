@@ -18,7 +18,7 @@ Once you have prepared the pdb/cif files, you can run the inference script direc
 
  ```
  $ python run_design.py \
-           --pdb example.pdb \
+           --pdb example/1a7l.A.pdb \
            --temperature 1 \
            --num_samples 10 \
            --lora_dir "YOUR LOCAL PATH" \
