@@ -31,7 +31,7 @@ Once you have prepared the pdb/cif files, you can run the inference script direc
 - 1.Before starting the training, you should first read the [Tokenization Tutorial](./Tokenization) and prepare the tokens.
 - 2.Run the following command depend on the number of GPUs available to you.
  ```
-bash run_ddp.sh NUM_GPU SSP
+bash run_ddp.sh NUM_GPU
 ```
 
 # 📄 Citation
