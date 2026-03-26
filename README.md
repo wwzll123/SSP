@@ -8,6 +8,10 @@
 - 1.Download the source code in this repository.
 - 2.Download the weights of all SSP models at [https://huggingface.co/zengwenwu/EiRA](https://huggingface.co/zengwenwu/EiRA/tree/main).
 - 3.Unzip all .zip packages.
+- 4.Prepare the environment. Please note that this environment is prepared for ESM3. If you need to use ProteinMPNN and ESM-IF1, please create a different environment.
+ ```
+pip install requirements.txt
+```
 
 |CheckPoint Name | Description | Size |
 |:--------|:--------:|-------:|
