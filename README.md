@@ -7,7 +7,7 @@
 - 1.Download the source code in this repository.
 - 2.Download the weights of all SSP models at [https://huggingface.co/zengwenwu/SSP](https://huggingface.co/zengwenwu/SSP/tree/main). ESM3 uses the [peft](https://github.com/huggingface/peft); ESM-IF1 uses the [minlora](https://github.com/changjonathanc/minLoRA); ProteinMPNN provides complete weights.
 - 3.Unzip all .zip packages.
-- 4.Prepare the environment. Please note that this environment is prepared for ESM3. If you need to use ProteinMPNN and ESM-IF1, please create a different environment.
+- 4.Prepare the environment. Please note that this environment is prepared for ESM3. If you need to use [ProteinMPNN](https://github.com/dauparas/ProteinMPNN) and [ESM-IF1](https://github.com/facebookresearch/esm), please create their proprietary environment..
  ```
 pip install requirements.txt
 ```
