@@ -274,7 +274,7 @@ def gather_metrics(metrics: dict, world_size: int) -> dict:
     return gathered
 
 
-@hydra.main(version_base=None, config_path="/root/MapDiff-main/conf", config_name="esm3_config")
+@hydra.main(version_base=None, config_path="./", config_name="esm3_config")
 def main(cfg: DictConfig):
     # 1. 初始化分布式
     rank, world_size, local_rank, device = setup_distributed()
