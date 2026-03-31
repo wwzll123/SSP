@@ -37,7 +37,17 @@ bash run_ddp.sh NUM_GPU
 
 # 📄 Citation
  ```
-pass
+@article {Zeng2026.03.26.714453,
+	author = {Zeng, Wenwu and Li, Xiaoyu and Zou, Haitao and Dou, Yutao and Zhao, Xiongjun and Peng, Shaoliang},
+	title = {Symmetric Self-play Online Preference Optimization for Protein Inverse Folding},
+	elocation-id = {2026.03.26.714453},
+	year = {2026},
+	doi = {10.64898/2026.03.26.714453},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2026/03/30/2026.03.26.714453},
+	eprint = {https://www.biorxiv.org/content/early/2026/03/30/2026.03.26.714453.full.pdf},
+	journal = {bioRxiv}
+}
  ```
 # ☎ Contact
 Please feel free to contact us at wwz_cs@hnu.edu.cn, if you have any question!
