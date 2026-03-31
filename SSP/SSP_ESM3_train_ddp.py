@@ -346,8 +346,7 @@ def main(cfg: DictConfig):
 
     # 6. 构建 ESMFold Oracle（每个进程独立持有）
     esmfold_model = EsmForProteinFolding.from_pretrained(
-        "facebook/esmfold_v1",
-        cache_dir="/root/autodl-tmp"
+        "facebook/esmfold_v1"
     ).to(device)
     esmfold_model.eval()
 
