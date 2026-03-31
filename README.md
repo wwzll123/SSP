@@ -14,14 +14,14 @@ pip install requirements.txt
 
 # 🔍 Inference
 
-Once you have prepared the pdb/cif files, you can run the inference script directly..
+Once you have prepared the pdb/cif files, you can run the inference script directly.
 
  ```
  $ python run_design.py \
            --pdb example/1a7l.A.pdb \
            --temperature 1 \
            --num_samples 10 \
-           --lora_dir "YOUR LOCAL PATH" \
+           --lora_dir "YOUR LOCAL MODEL WEIGHT PATH" \
            --output "SAVE FASTA PATH" \
            --device cuda:0
 ```
