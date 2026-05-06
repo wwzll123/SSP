@@ -5,7 +5,7 @@
 
 # 🏛️ Installation:
 - 1.Download the source code in this repository.
-- 2.Download the weights of all SSP models at [https://huggingface.co/XXX/SSP](https://huggingface.co/XXX/SSP/tree/main). For ESM3, we use the [peft](https://github.com/huggingface/peft); for ESM-IF1, we use the [minlora](https://github.com/changjonathanc/minLoRA); for ProteinMPNN, we provide complete weights.
+- 2.Download the weights of all SSP models at [here](./weight) or  [https://huggingface.co/XXX/SSP](https://huggingface.co/XXX/SSP/tree/main). For ESM3, we use the [peft](https://github.com/huggingface/peft); for ESM-IF1, we use the [minlora](https://github.com/changjonathanc/minLoRA); for ProteinMPNN, we provide complete weights.
 - 3.Unzip all .zip packages.
 - 4.Prepare the environment. Please note that this environment is prepared for ESM3. If you need to use [ProteinMPNN](https://github.com/dauparas/ProteinMPNN) and [ESM-IF1](https://github.com/facebookresearch/esm), please create their proprietary environment..
  ```
